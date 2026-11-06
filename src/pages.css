@@ -1,0 +1,534 @@
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* Original 2rem gaps. Labels stay on one line instead of wrapping. */
+.nav-menu {
+  gap: 2rem;
+  flex-wrap: nowrap;
+}
+
+.nav-menu > li {
+  flex-shrink: 0;
+}
+
+.nav-menu .nav-link,
+.nav-menu .cta-button {
+  white-space: nowrap;
+}
+
+/* The devices ship without the animation class, so they stay shifted off the column. */
+.macbook-item:nth-child(1),
+.macbook-item:nth-child(2) {
+  opacity: 1;
+}
+
+.macbook-item:nth-child(1) {
+  transform: translateY(-50%);
+}
+
+.macbook-item:nth-child(2) {
+  transform: translateY(-50%);
+}
+
+/* Phones and tablets use the full-screen menu. Wider screens keep the link bar. */
+@media (max-width: 1100px) {
+  .navbar {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    z-index: 10000;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+    position: relative;
+    z-index: 100000;
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.35rem;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    margin: 0;
+    padding: 5.5rem 1.5rem 2.5rem;
+    overflow-y: auto;
+    background: rgba(10, 10, 15, 0.98);
+    text-align: center;
+    z-index: 99999;
+    opacity: 0;
+    pointer-events: none;
+    transition: left 0.3s ease, opacity 0.3s ease;
+  }
+
+  .nav-menu.active {
+    left: 0;
+    opacity: 1 !important;
+    pointer-events: auto;
+    visibility: visible !important;
+    display: flex !important;
+  }
+
+  .nav-menu > li {
+    width: 100%;
+    margin: 0.2rem 0;
+  }
+
+  .nav-menu .nav-link {
+    font-size: 1.05rem;
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* Keep the 2rem gaps. Trim only the link padding so the bar fits a 1280px desktop. */
+@media (max-width: 1360px) and (min-width: 1101px) {
+  .nav-menu .nav-link {
+    padding-left: 0.55rem;
+    padding-right: 0.55rem;
+  }
+
+  .nav-menu .cta-button {
+    padding-left: 1.15rem !important;
+    padding-right: 1.15rem !important;
+  }
+}
+
+@media (max-width: 1100px) {
+  .hero,
+  .hero-container,
+  .hero-content,
+  .hero-visual,
+  .hero-slideshow {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .hero-container {
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100%;
+  }
+
+  .hero-subtitle,
+  .card-description {
+    max-width: 100%;
+  }
+
+  .stats-bar {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-items: center;
+    width: 100%;
+    max-width: 28rem;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 1rem 1.25rem;
+  }
+
+  .hero-buttons {
+    width: 100%;
+    max-width: 24rem;
+  }
+
+  .client-logos {
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .innovation-content,
+  .macbook-showcase-container,
+  .about-content,
+  .contact-content,
+  .cascade-container {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .showcase-stats,
+  .innovation-stats {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .featured-card {
+    padding: 1.5rem;
+  }
+
+  .card-stats-grid {
+    gap: 1.25rem;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .innovation-macbooks {
+    height: auto;
+    overflow: hidden;
+  }
+
+  .macbook-item,
+  .macbook-item:nth-child(1),
+  .macbook-item:nth-child(2),
+  .macbook-item:nth-child(1).animate-in,
+  .macbook-item:nth-child(2).animate-in {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    width: min(100%, 420px);
+    max-width: 100%;
+    margin: 0 auto 1rem;
+    transform: none;
+    opacity: 1;
+  }
+
+  .cascade-phones {
+    max-width: 100%;
+    height: 320px;
+    overflow: hidden;
+  }
+
+  .cascade-phone {
+    width: 28%;
+  }
+
+  .cascade-phone:nth-child(1) { left: 2%; top: 12px; }
+  .cascade-phone:nth-child(2) { left: 22%; top: 48px; }
+  .cascade-phone:nth-child(3) { left: 42%; top: 20px; }
+  .cascade-phone:nth-child(4) { left: 62%; top: 70px; }
+}
+
+/* overflow-x: hidden alone turns overflow-y into auto, so these blocks grow a scrollbar. */
+@media (max-width: 768px) {
+  section {
+    overflow-x: clip;
+    overflow-y: visible;
+  }
+
+  .macbook-showcase-container,
+  .featured-projects-container {
+    overflow: visible;
+  }
+
+  .macbook-display,
+  .web-showcase-slider,
+  .featured-slideshow {
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .web-slide {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    transform: none;
+  }
+
+  .web-slide:not(.active) {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .case-list,
+  .blog-grid,
+  .article-body,
+  .legal-copy {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .contact-form-container {
+    padding: 1.25rem !important;
+  }
+
+  .form-message-card {
+    min-height: 22rem;
+  }
+
+  .form-message-card h3 {
+    font-size: 1.45rem;
+  }
+
+  .showcase-stats,
+  .innovation-stats,
+  .card-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .team-grid,
+  .testimonials-grid,
+  .services-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+}
+
+/* The quote block sits on the cosmic background, same as Solvify.
+   The copied stylesheet paints a flat gray panel over the stars. */
+.contact-section {
+  background: transparent;
+}
+
+.contact-section::before {
+  display: none;
+}
+
+main > .services-section:first-child,
+main > .featured-projects-section:first-child,
+main > .contact-section:first-child,
+main > .about-section:first-child {
+  padding-top: 9rem;
+}
+
+.form-message-card {
+  position: relative;
+  z-index: 2;
+  min-height: 28rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.85rem;
+  padding: 1.5rem 0.5rem;
+}
+
+.form-message-mark {
+  width: 4.5rem;
+  height: 4.5rem;
+  margin-bottom: 0.35rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.form-message-card.success .form-message-mark {
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #10b981;
+}
+
+.form-message-card.error .form-message-mark {
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  color: #ef4444;
+}
+
+.form-message-card h3 {
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.form-message-card p {
+  margin: 0;
+  max-width: 26rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.form-message-card .form-submit {
+  max-width: 18rem;
+  margin-top: 0.75rem;
+}
+
+.contact-form-container {
+  overflow: visible;
+}
+
+.form-select-wrap {
+  position: relative;
+}
+
+.form-select-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  text-align: left;
+  font-family: inherit;
+  color: #f3e8ff;
+  background-color: #160e22;
+}
+
+.form-select-button.is-placeholder {
+  color: #f3e8ff;
+}
+
+.form-select-button::after {
+  content: '';
+  flex: 0 0 auto;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translateY(-2px);
+}
+
+.form-select-value {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.form-select-menu {
+  position: absolute;
+  z-index: 30;
+  top: calc(100% + 0.4rem);
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0.4rem;
+  list-style: none;
+  background: #160e22;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  max-height: 16rem;
+  overflow: auto;
+}
+
+.form-select-menu button {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  color: #f3e8ff;
+  font: inherit;
+  font-size: 1rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.form-select-menu button:hover,
+.form-select-menu button.is-selected {
+  background: rgba(79, 70, 229, 0.45);
+  color: #ffffff;
+}
+
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.case-list {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 6rem;
+}
+
+.blog-card {
+  display: block;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(139, 92, 246, 0.5);
+}
+
+.blog-card h3 {
+  font-family: 'Poppins', sans-serif;
+  color: #f3e8ff;
+  margin: 0.5rem 0 0.75rem;
+  font-size: 1.35rem;
+}
+
+.blog-card p,
+.legal-copy p,
+.legal-copy li {
+  color: #e9d5ff;
+}
+
+.blog-kicker {
+  color: #c084fc;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.legal-copy {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.legal-copy h2 {
+  font-family: 'Poppins', sans-serif;
+  color: #f3e8ff;
+  margin: 2rem 0 0.75rem;
+  font-size: 1.4rem;
+}
+
+.legal-copy ul {
+  margin: 0 0 1rem 1.2rem;
+}
+
+.article-body {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 2rem 6rem;
+}
+
+.article-body p {
+  color: #e9d5ff;
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+.topic-extra {
+  max-width: 820px;
+}
