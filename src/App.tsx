@@ -10,7 +10,7 @@ import { ContactSection } from './components/ContactSection'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/solvnext">
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<HomePage />} />

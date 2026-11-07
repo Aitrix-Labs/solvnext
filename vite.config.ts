@@ -116,6 +116,7 @@ function contactApi(): Plugin {
 
 export default defineConfig({
   plugins: [react(), contactApi()],
+  base: '/solvnext/',
   server: {
     port: 5180,
     strictPort: true,
