@@ -1,4 +1,5 @@
 import { Link, useLocation, useParams } from 'react-router-dom'
+import { asset } from '../asset'
 import { ContactSection } from '../components/ContactSection'
 import { industries, services } from '../data/content'
 
@@ -16,7 +17,7 @@ const routes: Record<string, {
     title: 'Mobile Apps Built',
     highlight: 'for Melbourne',
     lead: 'Native and cross-platform applications defined by user-centric design and robust functionality. iOS, Android, React Native, and Flutter.',
-    image: '/images/portfolio_banner_app_desktop-v2.webp',
+    image: asset('images/portfolio_banner_app_desktop-v2.webp'),
     story: services[0].story,
     highlights: services[0].highlights,
   },
@@ -25,7 +26,7 @@ const routes: Record<string, {
     title: 'Web Solutions That',
     highlight: 'Scale Globally',
     lead: 'Enterprise web apps, e-commerce, and SaaS platforms engineered for speed, security, and the next ten times your traffic.',
-    image: '/images/macbooknew.avif',
+    image: asset('images/macbooknew.avif'),
     story: services[1].story,
     highlights: services[1].highlights,
   },
@@ -34,7 +35,7 @@ const routes: Record<string, {
     title: 'Custom Software',
     highlight: 'for Real Operations',
     lead: 'Internal platforms, customer portals, and integrations when an off-the-shelf tool stops fitting the way your business actually works.',
-    image: '/images/app_showcase.webp',
+    image: asset('images/app_showcase.webp'),
     story: [
       'Solvnext designs software around the workflow you already have, then removes the steps that waste a day.',
       'React, Node.js, Python, and cloud services are chosen for the problem, not for a trend.',
@@ -51,7 +52,7 @@ const routes: Record<string, {
     title: 'AI Products with',
     highlight: 'a Real Job',
     lead: 'We put models to work inside the apps and web platforms you already need: support, search, documents, and decisions.',
-    image: '/images/success_strategy_app_2_desktop-v2.webp',
+    image: asset('images/success_strategy_app_2_desktop-v2.webp'),
     story: [
       'Solvnext treats AI as a feature of a product, not a demo. The interface, the data, and the fallback when the model is unsure all ship together.',
       'Our Melbourne team designs assistants, retrieval, and automation that sit inside healthcare, finance, and education workflows.',

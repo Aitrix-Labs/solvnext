@@ -1,3 +1,4 @@
+import { asset } from '../asset'
 export const brand = {
   name: 'Solvnext',
   tagline: 'Digital Excellence',
@@ -41,7 +42,7 @@ export const services: Service[] = [
     features: ['iOS & Android', 'React Native / Flutter', 'UI/UX Design'],
     stat: '100+',
     statLabel: 'Apps Launched',
-    image: '/images/portfolio_banner_app_desktop-v2.webp',
+    image: asset('images/portfolio_banner_app_desktop-v2.webp'),
     lead: 'Native and cross-platform apps that people actually keep on their home screen.',
     story: [
       'Solvnext designs and ships iOS and Android products for healthcare, fintech, and education teams across Victoria.',
@@ -63,7 +64,7 @@ export const services: Service[] = [
     features: ['Enterprise Web Apps', 'E-Commerce', 'SaaS Platforms'],
     stat: '99.9%',
     statLabel: 'Uptime',
-    image: '/images/macbooknew.avif',
+    image: asset('images/macbooknew.avif'),
     lead: 'Web platforms built to stay fast when traffic, catalogues, and teams grow.',
     story: [
       'We build enterprise web apps, commerce storefronts, and SaaS products with React, Next.js, and Node.js.',
@@ -84,7 +85,7 @@ export const services: Service[] = [
     features: ['AWS / Azure', 'DevOps', 'Cloud Migration'],
     stat: '24/7',
     statLabel: 'Monitoring',
-    image: '/images/portfolio_banner.webp',
+    image: asset('images/portfolio_banner.webp'),
     lead: 'Infrastructure that scales with the product, not against it.',
     story: [
       'Solvnext migrates and operates workloads on AWS and Azure with pipelines your team can trust.',
@@ -106,7 +107,7 @@ export const services: Service[] = [
     features: ['User Experience Research', 'Interface Design', 'Prototyping & Testing'],
     stat: '4.9/5',
     statLabel: 'Client Satisfaction',
-    image: '/images/success_strategy_app_2_desktop-v2.webp',
+    image: asset('images/success_strategy_app_2_desktop-v2.webp'),
     lead: 'Interfaces that feel obvious the first time someone uses them.',
     story: [
       'Research, flows, and visual systems come before a single production screen.',
@@ -128,7 +129,7 @@ export const services: Service[] = [
     features: ['Technology Audits', 'Digital Strategy', 'Architecture Planning'],
     stat: '100%',
     statLabel: 'Success Rate',
-    image: '/images/macbook2.avif',
+    image: asset('images/macbook2.avif'),
     lead: 'A clear technical plan before you spend a dollar on the wrong build.',
     story: [
       'We audit what you already run, then map the shortest path to the product you actually need.',
@@ -150,7 +151,7 @@ export const services: Service[] = [
     features: ['24/7 Technical Support', 'Regular Updates & Patches', 'Performance Monitoring'],
     stat: '24/7',
     statLabel: 'Support',
-    image: '/images/app_showcase.webp',
+    image: asset('images/app_showcase.webp'),
     lead: 'The product stays healthy after the launch party ends.',
     story: [
       'Solvnext stays on the product with patches, store updates, and performance work.',
@@ -170,7 +171,7 @@ export const industries = [
     slug: 'healthcare',
     title: 'Healthcare',
     icon: '🏥',
-    image: '/images/success_strategy_app_2_desktop-v2.webp',
+    image: asset('images/success_strategy_app_2_desktop-v2.webp'),
     lead: 'Secure patient, clinic, and telehealth products built for Australian privacy expectations.',
     story: [
       'We design portals that connect patients and providers without making clinical teams fight the software.',
@@ -182,7 +183,7 @@ export const industries = [
     slug: 'fintech',
     title: 'FinTech',
     icon: '💸',
-    image: '/images/portfolio_banner_app_desktop-v2.webp',
+    image: asset('images/portfolio_banner_app_desktop-v2.webp'),
     lead: 'Financial products that stay accurate when the volume is real.',
     story: [
       'From wallets to trading dashboards, we build flows people trust with their money.',
@@ -194,7 +195,7 @@ export const industries = [
     slug: 'real-estate',
     title: 'Real Estate',
     icon: '🏠',
-    image: '/images/portfolio_banner.webp',
+    image: asset('images/portfolio_banner.webp'),
     lead: 'Listings, inspections, and agent tools that move deals forward.',
     story: [
       'Property businesses need search, maps, and enquiry flows that do not fall over on campaign day.',
@@ -206,7 +207,7 @@ export const industries = [
     slug: 'logistics',
     title: 'Logistics',
     icon: '🚚',
-    image: '/images/driverapp.webp',
+    image: asset('images/driverapp.webp'),
     lead: 'Driver, fleet, and dispatch software that works away from the office wifi.',
     story: [
       'Field teams need apps that stay usable on the road and sync when the signal returns.',
@@ -218,7 +219,7 @@ export const industries = [
     slug: 'education',
     title: 'Education',
     icon: '🎓',
-    image: '/images/app_showcase.webp',
+    image: asset('images/app_showcase.webp'),
     lead: 'Learning platforms that teachers and students can finish a lesson inside.',
     story: [
       'We build course delivery, progress, and admin tools that stay simple on a phone.',
@@ -230,7 +231,7 @@ export const industries = [
     slug: 'retail',
     title: 'Retail',
     icon: '🛍️',
-    image: '/images/appfood.webp',
+    image: asset('images/appfood.webp'),
     lead: 'Commerce experiences that hold a catalogue, a checkout, and a rush of customers.',
     story: [
       'Retail teams come to us when the storefront, the app, and the warehouse need to agree.',
@@ -250,7 +251,7 @@ export const projects = [
       { value: '4.7 Stars', label: 'App Rating' },
       { value: '500K+', label: 'Active Users' },
     ],
-    image: '/images/cascading_dimers_screen_1.webp',
+    image: asset('images/cascading_dimers_screen_1.webp'),
   },
   {
     title: 'DriveConnect',
@@ -261,7 +262,7 @@ export const projects = [
       { value: '4.9 Stars', label: 'App Rating' },
       { value: '10K+', label: 'Active Drivers' },
     ],
-    image: '/images/driverapp.webp',
+    image: asset('images/driverapp.webp'),
   },
   {
     title: 'FinTech Revolution',
@@ -272,7 +273,7 @@ export const projects = [
       { value: '4.8 Stars', label: 'App Rating' },
       { value: '1M+', label: 'Transactions' },
     ],
-    image: '/images/portfolio_banner_app_desktop-v2.webp',
+    image: asset('images/portfolio_banner_app_desktop-v2.webp'),
   },
   {
     title: 'Healthcare Connect',
@@ -283,7 +284,7 @@ export const projects = [
       { value: '4.9 Stars', label: 'Satisfaction' },
       { value: '50K+', label: 'Patients' },
     ],
-    image: '/images/success_strategy_app_2_desktop-v2.webp',
+    image: asset('images/success_strategy_app_2_desktop-v2.webp'),
   },
   {
     title: 'E-Commerce Giant',
@@ -294,7 +295,7 @@ export const projects = [
       { value: '4.6 Stars', label: 'Store Rating' },
       { value: '100K+', label: 'Daily Users' },
     ],
-    image: '/images/portfolio_banner.webp',
+    image: asset('images/portfolio_banner.webp'),
   },
   {
     title: 'YouFoodz',
@@ -305,7 +306,7 @@ export const projects = [
       { value: '4.9 Stars', label: 'Taste Rating' },
       { value: '200K+', label: 'Happy Eaters' },
     ],
-    image: '/images/appfood.webp',
+    image: asset('images/appfood.webp'),
   },
   {
     title: 'MyDeal',
@@ -316,7 +317,7 @@ export const projects = [
       { value: '4.8 Stars', label: 'App Store' },
       { value: '1M+', label: 'Downloads' },
     ],
-    image: '/images/cascading_mydeal_screen_1.webp',
+    image: asset('images/cascading_mydeal_screen_1.webp'),
   },
 ]
 
@@ -453,19 +454,19 @@ export const budgets = [
 ]
 
 export const heroSlides = [
-  { src: '/images/portfolio_banner_app_desktop-v2.webp', alt: 'Mobile App Development' },
-  { src: '/images/macbook2.avif', alt: 'Web Development Solutions' },
-  { src: '/images/success_strategy_app_2_desktop-v2.webp', alt: 'App Strategy & Success' },
+  { src: asset('images/portfolio_banner_app_desktop-v2.webp'), alt: 'Mobile App Development' },
+  { src: asset('images/macbook2.avif'), alt: 'Web Development Solutions' },
+  { src: asset('images/success_strategy_app_2_desktop-v2.webp'), alt: 'App Strategy & Success' },
 ]
 
 export const webSlides = [
-  { src: '/images/macbooknew.avif', alt: 'Web Solutions on Multiple Devices' },
-  { src: '/images/portfolio_banner.webp', alt: 'Web Development Portfolio' },
+  { src: asset('images/macbooknew.avif'), alt: 'Web Solutions on Multiple Devices' },
+  { src: asset('images/portfolio_banner.webp'), alt: 'Web Development Portfolio' },
 ]
 
 export const phones = [
-  '/images/cascading_dimers_screen_1.webp',
-  '/images/cascading_dimers_screen_2.webp',
-  '/images/cascading_itrackit_screen_1.webp',
-  '/images/cascading_itrackit_screen_2.webp',
+  asset('images/cascading_dimers_screen_1.webp'),
+  asset('images/cascading_dimers_screen_2.webp'),
+  asset('images/cascading_itrackit_screen_1.webp'),
+  asset('images/cascading_itrackit_screen_2.webp'),
 ]

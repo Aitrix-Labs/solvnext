@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { asset } from '../asset'
 import { Link } from 'react-router-dom'
 import { ContactSection } from '../components/ContactSection'
 import { CtaArrow, FaqIcon } from '../components/Icons'
@@ -15,8 +16,8 @@ import {
 
 const logos = Array.from({ length: 12 }, (_, index) =>
   index % 2 === 0
-    ? { src: '/images/deloitte_logo.webp', alt: 'Deloitte' }
-    : { src: '/images/tesla_logo.webp', alt: 'Tesla' },
+    ? { src: asset('images/deloitte_logo.webp'), alt: 'Deloitte' }
+    : { src: asset('images/tesla_logo.webp'), alt: 'Tesla' },
 )
 
 function useRotator(length: number, delay: number) {
@@ -251,10 +252,10 @@ export function HomePage() {
           <div className="innovation-macbooks">
             <div className="macbook-grid">
               <div className="macbook-item">
-                <img src="/images/macbooknew.avif" alt="MacBook showing innovative technology interface" className="device-laptop animate-in" />
+                <img src={asset('images/macbooknew.avif')} alt="MacBook showing innovative technology interface" className="device-laptop animate-in" />
               </div>
               <div className="macbook-item">
-                <img src="/images/app_showcase.webp" alt="App Interface Showcase" className="device-tablet animate-in" />
+                <img src={asset('images/app_showcase.webp')} alt="App Interface Showcase" className="device-tablet animate-in" />
               </div>
             </div>
           </div>
